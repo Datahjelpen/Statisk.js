@@ -1,6 +1,6 @@
 # Statisk.js
 
-An opinionated static site generator using (Nunjucks)[https://mozilla.github.io/nunjucks/]
+An opinionated static site generator using [Nunjucks](https://mozilla.github.io/nunjucks/)
 
 Tired of setting up Webpack, Babel, Gulp, Grunt, Bower, Browserify and the likes when all you really want is a simple way to build HTML files with a templating system? 
 Then Statisk.js is for you. 
