@@ -1,11 +1,10 @@
 {
   "name": "@datahjelpen/statisk",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An opinionated static site generator using Nunjucks",
   "publishConfig": {
     "access": "public"
   },
-  "type": "module",
   "keywords": ["Static site generator", "Nunjucks"],
   "author": "Datahjelpen AS",
   "license": "ISC",
