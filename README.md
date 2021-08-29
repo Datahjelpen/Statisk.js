@@ -45,9 +45,26 @@ Statisk.js expects a certian folder stucture. Consider the following example:
 │
 ```
 
-It will generate an output in /dist.
+It will generate the following output in /dist:
 
-Other files (JS, CSS, Media files) are just copied over as long as they are inside /src; They don't need to specifically be in a folder named like `css` or `js`.
+```
+📦 dist
+│  📜 page-1.njk
+│  📜 page-2.njk
+│
+└─ 📂 css
+│  │  📜 style.css
+│
+└─ 📂 js
+│  │  📜 script.js
+│
+└─ 📂 images
+│  │  📜 image-1.png
+│  │  📜 image-2.jpg
+│
+```
+
+Everything that is not a `.njk` file is just copied over as long as they it's inside `/src`; The files don't need to be in a specifically folder named like `css` or `images`.
 For example `/src/folder-1/folder-2/style.css` will generate `/dist/folder-1/folder-2/style.css`.
 
 ## Future development
