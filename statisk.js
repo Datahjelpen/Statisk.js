@@ -11,7 +11,10 @@ const nunjucksTemplates = nunjucksDir + "/templates/**/*.njk";
 
 function renderNunjucks(inputPath, outputPath, callback) {
   nunjucks.configure("./" + nunjucksDir, { autoescape: true });
-  const htmlOutput = nunjucks.render(inputPath);
+  
+  const htmlOutput = nunjucks.render(inputPath, {
+    hash: [...Array(30)].map(() => Math.random().toString(36)[2]).join('')
+  });
 
   writeFile(outputPath, htmlOutput, callback);
 }
