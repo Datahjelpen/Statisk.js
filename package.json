@@ -1,0 +1,25 @@
+{
+  "name": "@datahjelpen/statisk",
+  "version": "0.0.1",
+  "description": "An opinionated static site generator using Nunjucks",
+  "main": "statisk.js",
+  "scripts": {
+    "start": "node statisk.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Datahjelpen/Statisk.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Datahjelpen/Statisk.js/issues"
+  },
+  "homepage": "https://github.com/Datahjelpen/Statisk.js#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.5",
+    "nunjucks": "^3.2.3"
+  }
+}
