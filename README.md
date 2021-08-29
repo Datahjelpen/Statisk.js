@@ -7,20 +7,34 @@ Then Statisk.js is for you.
 
 ## Setup
 
-Statisk.js expects a certian folder stucture for Nunjucks, like so:
+Statisk.js expects a certian folder stucture, like so:
 
-- /src
-- - /views
-- - - page-1.njk
-- - - page-2.njk
-- - - /templates
-- - - - template-1.njk
-- - - - template-2.njk
+```
+📦 src
+└─ 📂 views
+│  │  📜 page-1.njk
+│  │  📜 page-2.njk
+│  │
+│  └─ 📂 templates
+│     │  📜 template-1.njk
+│     │  📜 template-2.njk
+│
+└─ 📂 css
+│  │  📜 style.css
+│
+└─ 📂 js
+│  │  📜 script.js
+│
+└─ 📂 images
+│  │  📜 image-1.png
+│  │  📜 image-2.jpg
+│
+```
 
 It will generate an output in /dist.
 
-Other files (JS, CSS, Media files) are just copied over as long as they are inside /src.
-So for example /src/folder-1/folder-2/style.css will generate /dist/folder-1/folder-2/style.css
+Other files (JS, CSS, Media files) are just copied over as long as they are inside /src; They don't need to spesifically be in a folder named like `css` or `js`.
+For example `/src/folder-1/folder-2/style.css` will generate `/dist/folder-1/folder-2/style.css`.
 
 ## Future development
 
