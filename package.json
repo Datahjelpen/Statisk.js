@@ -5,6 +5,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
   "keywords": ["Static site generator", "Nunjucks"],
   "author": "Datahjelpen AS",
   "license": "ISC",
