@@ -21,7 +21,7 @@ node server.js
 
 ## Setup
 
-Statisk.js expects a certian folder stucture, like so:
+Statisk.js expects a certian folder stucture. Consider the following example:
 
 ```
 📦 src
@@ -47,7 +47,7 @@ Statisk.js expects a certian folder stucture, like so:
 
 It will generate an output in /dist.
 
-Other files (JS, CSS, Media files) are just copied over as long as they are inside /src; They don't need to spesifically be in a folder named like `css` or `js`.
+Other files (JS, CSS, Media files) are just copied over as long as they are inside /src; They don't need to specifically be in a folder named like `css` or `js`.
 For example `/src/folder-1/folder-2/style.css` will generate `/dist/folder-1/folder-2/style.css`.
 
 ## Future development
