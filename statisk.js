@@ -55,11 +55,11 @@ function handleEvent(event, bs) {
 }
 
 // TODO
-const build = () => {
+exports.build = () => {
   // render(nunjucksDir + "/index.njk", outputDir + "/index.html");
 };
 
-const startDevEnv = () => {
+exports.startDevEnv = () => {
   const bs = require("browser-sync").create();
   bs.init({
     server: "./" + outputDir,
@@ -103,5 +103,3 @@ const startDevEnv = () => {
     ],
   });
 };
-
-export { build, startDevEnv }
