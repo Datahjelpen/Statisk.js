@@ -5,6 +5,20 @@ An opinionated static site generator using [Nunjucks](https://mozilla.github.io/
 Tired of setting up Webpack, Babel, Gulp, Grunt, Bower, Browserify and the likes when all you really want is a simple way to build HTML files with a templating system? 
 Then Statisk.js is for you. 
 
+## Usage
+
+server.js
+```js
+const statisk = require("@datahjelpen/statisk");
+statisk.startDevEnv();
+```
+node server.js
+
+## API
+
+- `startDevEnv()` starts a dev server.
+- `build()` renders all nunjuck files and copies all other files.
+
 ## Setup
 
 Statisk.js expects a certian folder stucture, like so:
