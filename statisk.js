@@ -65,9 +65,11 @@ exports.startDevEnv = () => {
     server: "./" + outputDir,
     open: false,
     files: [
+      // Just refresh for templates
       nunjucksTemplates,
+      // Copy everything that is not a .njk file
       {
-        match: [inputDir + "/**/*.css", inputDir + "/**/*.html", inputDir + "/**/*.js"],
+        match: [inputDir + "/**/!(*.njk)"],
         fn: function (event, file) {
           const input = file;
           const output = file.replace(inputDir, outputDir);
@@ -83,6 +85,7 @@ exports.startDevEnv = () => {
             .catch((error) => console.error(error));
         },
       },
+      // Render templates and save output (exclude templates)
       {
         match: [nunjucksViews, "!" + nunjucksTemplates],
         fn: function (event, file) {
