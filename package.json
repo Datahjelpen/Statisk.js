@@ -2,6 +2,12 @@
   "name": "@datahjelpen/statisk",
   "version": "0.0.1",
   "description": "An opinionated static site generator using Nunjucks",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["Static site generator", "Nunjucks"],
+  "author": "Datahjelpen AS",
+  "license": "ISC",
   "main": "statisk.js",
   "scripts": {
     "start": "node statisk.js",
@@ -11,9 +17,6 @@
     "type": "git",
     "url": "git+https://github.com/Datahjelpen/Statisk.js.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Datahjelpen/Statisk.js/issues"
   },
