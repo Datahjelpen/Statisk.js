@@ -11,7 +11,7 @@ const nunjucksTemplates = nunjucksDir + "/templates/**/*.njk";
 
 function renderNunjucks(inputPath, outputPath, callback) {
   nunjucks.configure("./" + nunjucksDir, { autoescape: true });
-  
+
   const htmlOutput = nunjucks.render(inputPath, {
     hash: [...Array(30)].map(() => Math.random().toString(36)[2]).join('')
   });
@@ -65,7 +65,12 @@ exports.build = () => {
 exports.startDevEnv = () => {
   const bs = require("browser-sync").create();
   bs.init({
-    server: "./" + outputDir,
+    server: {
+      baseDir: "./" + outputDir,
+      serveStaticOptions: {
+        extensions: ['html']
+      }
+    },
     open: false,
     files: [
       // Just refresh for templates
