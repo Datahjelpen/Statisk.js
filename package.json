@@ -1,6 +1,6 @@
 {
   "name": "@datahjelpen/statisk",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "An opinionated static site generator using Nunjucks",
   "publishConfig": {
     "access": "public"
