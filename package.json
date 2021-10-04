@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/Datahjelpen/Statisk.js#readme",
   "dependencies": {
-    "browser-sync": "^2.27.5",
     "nunjucks": "^3.2.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5"
   }
 }
