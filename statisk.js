@@ -1,5 +1,6 @@
 const fs = require("fs");
 const getDirName = require("path").dirname;
+const glob = require("glob")
 const nunjucks = require("nunjucks");
 
 const inputDir = "src";
@@ -57,9 +58,30 @@ function handleEvent(event, bs) {
   });
 }
 
-// TODO
 exports.build = () => {
-  // render(nunjucksDir + "/index.njk", outputDir + "/index.html");
+  // Copy everything that is not a nunjucks file
+  glob(inputDir + "/**/!(*.njk)", { ignore: nunjucksDir, nodir: true }, function (er, files) {
+    files.forEach(file => {
+      const input = file;
+      const output = file.replace(inputDir, outputDir);
+      copyFile(input, output, (error) => {
+        if (error) console.error("Copy error", error);
+        console.log(file + " was copied to " + output);
+      });
+    })
+  })
+
+  // Render nunjucks views (ignore templates)
+  glob(nunjucksViews, { ignore: nunjucksTemplates, nodir: true }, function (er, files) {
+    files.forEach(file => {
+      const input = file.replace(nunjucksDir + "/", "");
+      const output = file.replace(nunjucksDir, outputDir).replace(".njk", ".html");
+      renderNunjucks(input, output, (error) => {
+        if (error) console.error("Render error", error);
+        console.log(file + " was rendered as " + output);
+      });
+    })
+  })
 };
 
 exports.startDevEnv = () => {
