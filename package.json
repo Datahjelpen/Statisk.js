@@ -1,11 +1,14 @@
 {
   "name": "@datahjelpen/statisk",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An opinionated static site generator using Nunjucks",
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["Static site generator", "Nunjucks"],
+  "keywords": [
+    "Static site generator",
+    "Nunjucks"
+  ],
   "author": "Datahjelpen AS",
   "license": "ISC",
   "main": "statisk.js",
@@ -22,7 +25,10 @@
   },
   "homepage": "https://github.com/Datahjelpen/Statisk.js#readme",
   "dependencies": {
-    "browser-sync": "^2.27.5",
+    "glob": "^7.2.0",
     "nunjucks": "^3.2.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5"
   }
 }
