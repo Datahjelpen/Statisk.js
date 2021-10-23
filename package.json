@@ -1,6 +1,6 @@
 {
   "name": "@datahjelpen/statisk",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "An opinionated static site generator using Nunjucks",
   "publishConfig": {
     "access": "public"
@@ -26,9 +26,7 @@
   "homepage": "https://github.com/Datahjelpen/Statisk.js#readme",
   "dependencies": {
     "glob": "^7.2.0",
-    "nunjucks": "^3.2.3"
-  },
-  "devDependencies": {
+    "nunjucks": "^3.2.3",
     "browser-sync": "^2.27.5"
   }
 }
